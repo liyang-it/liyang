@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liyang.mapper.songMapper">
+    <resultMap id="BaseResultMap" type="com.liyang.entity.song" >
+        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="alId" jdbcType="VARCHAR" property="alId" />
+        <result column="alName" jdbcType="VARCHAR" property="alName" />
+        <result column="alPic" jdbcType="VARCHAR" property="alPic" />
+        <result column="alPicUrl" jdbcType="VARCHAR" property="alPicUrl" />
+        <result column="arId" jdbcType="VARCHAR" property="arId" />
+        <result column="arName" jdbcType="VARCHAR" property="arName" />
+        <result column="mvId" jdbcType="VARCHAR" property="mvId" />
+    </resultMap>
+    <select id="queryPlayListAll" resultMap="BaseResultMap" >
+        select * from song
+    </select>
+    <insert id="addSong" parameterType="com.liyang.entity.song" >
+        insert into song
+            (id,name,alId,alName,alPic,alPicUrl,arId,arName,mvId)
+            values
+             (#{id}, #{name}, #{alId}, #{alName}, #{alPic}, #{alPicUrl}, #{arId}, #{arName}, #{mvId})
+    </insert>
+
+    <select id="queryPlayListPageAll" resultMap="BaseResultMap" parameterType="com.liyang.entity.song">
+        select * from playList limit #{page},#{limit}
+    </select>
+</mapper>
