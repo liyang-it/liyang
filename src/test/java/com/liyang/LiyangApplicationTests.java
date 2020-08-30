@@ -44,13 +44,13 @@ public class LiyangApplicationTests {
     // 新增歌曲到数据库
     for (int i = 0; i<trackIds.size();i++){
       System.out.println(trackIds.get(i).getId());
+      // 新增 歌单与歌曲之间桥梁的中间信息
       Track t = trackIds.get(i);
       t.setGdId("2409342460");
       service3.addTrack(t);
-      //添加完 歌单与歌曲连接信息后 添加歌曲
+      //添加完 (歌单与歌曲连接信息)后 添加歌曲信息
       TaskUpdateMusic task = new TaskUpdateMusic();
       service4.addSong(task.getSong(t.getId()));
-
     }
 
   }
