@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface playListService {
 
-  public List<Playlist> queryPlayListAll();
   public int addPlayList(Playlist e);
+  List<Playlist> queryPlayListPageAll(Playlist e);
+  int deletePlayList();
 }

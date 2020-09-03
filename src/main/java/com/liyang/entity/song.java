@@ -3,7 +3,7 @@ package com.liyang.entity;
 /**
  * 歌曲pojo
  */
-public class song {
+public class song extends baseEntity{
   private String id; //歌曲ID
   private String name;  //歌曲名称
   private String alId; //专辑ID
@@ -13,6 +13,24 @@ public class song {
   private String arId;//音乐作者ID
   private String arName;//音乐作者名
   private String mvId;//mvid
+  private String url;//音乐地址
+  private String gdid;
+
+  public String getGdid() {
+    return gdid;
+  }
+
+  public void setGdid(String gdid) {
+    this.gdid = gdid;
+  }
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
 
   @Override
   public String toString() {

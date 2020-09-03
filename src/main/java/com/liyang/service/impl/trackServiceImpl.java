@@ -17,7 +17,13 @@ public class trackServiceImpl implements trackService {
   public TrackMapper mapper;
 
   @Override
+  public int deleteTrack() {
+    return mapper.deleteTrack();
+  }
+
+  @Override
   public int addTrack(Track t) {
     return mapper.addTrack(t);
+
   }
 }

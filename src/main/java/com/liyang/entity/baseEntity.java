@@ -1,8 +1,8 @@
 package com.liyang.entity;
 
 public class baseEntity {
-  private Integer page;
-  private Integer limit;
+  private Integer page = 1;
+  private Integer limit = 10;
   private String params1;
 
   public void setParams1(String params1) {

@@ -15,12 +15,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.task.TaskExecutor;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.FutureTask;
 
 @Configuration
 @Component
@@ -40,16 +46,35 @@ public class TaskUpdateMusic {
   public songService songService;
 
   public Logger log = LoggerFactory.getLogger(TaskUpdateMusic.class);
-
+  /**
+   * 每天 2点 删除所有数据
+   */
+  /*
+  @Scheduled(cron = "0 0 2 * * ? ")
+  public void delPlayList(){
+    long startTime = System.currentTimeMillis();
+    log.info("开始 删除所有歌曲信息");
+    int si = songService.deleteSong();
+    log.info("删除歌曲音乐状态 [{}] ",si);
+    int ti = trackService.deleteTrack();
+    log.info("删除中间信息状态 [{}] ",ti);
+    int pi = playListService.deletePlayList();
+    log.info("删除歌单状态 [{}] ",pi);
+    int pid = playListTimeService.deletePlayListTime();
+    log.info("删除歌曲歌单创建时间状态 [{}] ",pid);
+    long stopTime = System.currentTimeMillis();
+    log.info("日期 :[{}]; 每日推荐歌单列表更新成功;一共耗时 [{}] 秒",dateTimeTool.getYmd(),(stopTime - startTime)/1000);
+  }
+//
+//  public static void main(String[] args) {
+//    TaskUpdateMusic task = new TaskUpdateMusic();
+//    task.setPlayList();
+//  }
+*/
   /**
    * 每天 4点 获取网易云每日推荐歌单列表  插入到数据库中
    */
-  //@Scheduled(cron = "0 18 22 * * ? ")
-  public static void main(String[] args) {
-    TaskUpdateMusic taskUpdateMusic = new TaskUpdateMusic();
-    //taskUpdateMusic.setPlayList();
-    taskUpdateMusic.getPlayList("15575141967","liyang664243");
-  }
+  @Scheduled(cron = "0 33 8 * * ? ")
   public void setPlayList(){
     log.info("开始 跟新每日歌单信息");
     long startTime = System.currentTimeMillis();
@@ -59,8 +84,7 @@ public class TaskUpdateMusic {
     // 将获取到的歌单信息 插入到自己数据库中
 
     String ymdStr = dateTimeTool.getYmd();//创建当前日期唯一id
-    playListTimeService.addPlayListTime(ymdStr);//新增 当天日期信息
-    List<Playlist> list = getPlayList(phone,password,250); //获取歌单 列表
+    List<Playlist> list = getPlayList(phone,password,162); //获取歌单 列表
     for (int i = 0;i <list.size();i++){
       //新增歌单详细信息
       Playlist p = list.get(i);
@@ -69,6 +93,7 @@ public class TaskUpdateMusic {
       //获取歌单内所有音乐并且新增到数据库
       addSong(p.getId());
     }
+    playListTimeService.addPlayListTime(ymdStr);//新增 当天日期信息
     long stopTime = System.currentTimeMillis();
     log.info("日期 :[{}]; 每日推荐歌单列表更新成功;一共耗时 [{}] 秒",dateTimeTool.getYmd(),(stopTime - startTime)/1000);
   }
@@ -83,28 +108,38 @@ public class TaskUpdateMusic {
   public List<Playlist> getPlayList(String phone,String password,int limit){
     // 发送http请求获取歌单列表
     log.info("日期[{}];开始登陆网易云，并且 发送请求 获取每日推荐歌单列表",dateTimeTool.getYmd());
-    // 每日推荐歌单需要登录 之后获取
-    String loginUrl = "https://musicapi.leanapp.cn/login/cellphone?phone=PHONE&password=PASSWORD";
-    loginUrl = loginUrl.replace("PHONE",phone).replace("PASSWORD",password);
-    // 发送登录请求
-    String loginStr = httpRequestTools.get(loginUrl);
-    JSONObject loginJson = JSONObject.fromObject(loginStr);
-    log.info("登录状态[{}]",loginJson.get("code"));
-    // 准备发送请求获取 每日推荐歌单
-    String gdListUrl = "https://musicapi.leanapp.cn/personalized?limit="+ limit;
-    String gdStr = httpRequestTools.get(gdListUrl);
-    JSONObject gdJson = JSONObject.fromObject(gdStr);
-    String code = gdJson.get("code").toString();
-    log.info("请求获取歌单 状态 [{}] ",code);
-    if(code.equals("-601")){
-      limit = limit - 50;
-      log.error("请求获取歌单列表信息失败,原因[{}],减少查询歌单数据量，重新发送请求,歌单获取条数减少为:[{}]",gdJson.get("batchMsg").toString(),limit);
-
+    boolean isTrue = false;
+    List<Playlist> gdList = new ArrayList<Playlist>();
+    int executeCount = 0;
+    while (isTrue = true){
+      executeCount++;
+      // 每日推荐歌单需要登录 之后获取
+      String loginUrl = "http://47.99.165.122:3000/login/cellphone?phone=PHONE&password=PASSWORD";
+      loginUrl = loginUrl.replace("PHONE",phone).replace("PASSWORD",password);
+      // 发送登录请求
+      String loginStr = httpRequestTools.get(loginUrl);
+      JSONObject loginJson = JSONObject.fromObject(loginStr);
+      log.info("登录状态[{}]",loginJson.get("code"));
+      // 准备发送请求获取 每日推荐歌单
+      String gdListUrl = "http://47.99.165.122:3000/personalized?limit="+ limit;
+      String gdStr = httpRequestTools.get(gdListUrl);
+      JSONObject gdJson = JSONObject.fromObject(gdStr);
+      String code = gdJson.get("code").toString();
+      log.info("请求获取歌单 状态 [{}] ",code);
+      if(code.equals("-601")){
+        limit = limit - 20;
+        log.error("请求获取歌单列表信息失败,原因[{}],减少查询歌单数据量，重新发送请求,歌单获取条数减少为:[{}]",gdJson.get("batchMsg").toString(),limit);
+      }else{
+        // 获取到歌单json列表后转换成具体 集合对象
+        gdList = JSON.parseArray(gdJson.get("result").toString(),Playlist.class);
+        log.info("获取每日推荐歌单成功,一共获取[{}] 条歌单信息",gdList.size());
+        isTrue = true;
+        break;
+      }
     }
-    // 获取到歌单json列表后转换成具体 集合对象
-    List<Playlist> gdList = JSON.parseArray(gdJson.get("result").toString(),Playlist.class);
-    log.info("获取每日推荐歌单成功,一共获取[{}] 条歌单信息",gdList.size());
+    log.info("执行获取每日推荐歌单 共 [{}] 次",executeCount );
     return gdList;
+
 
   }
   /**
@@ -114,7 +149,7 @@ public class TaskUpdateMusic {
   public void addSong(String  gdid){
     //根据歌单Id 查询详细的歌单信息
     log.info("准备获取歌单内所有歌曲信息 ;歌单ID[{}]",gdid);
-    String toUrl = "https://musicapi.leanapp.cn/playlist/detail?id="+gdid;
+    String toUrl = "http://47.99.165.122:3000/playlist/detail?id="+gdid;
     String resultJson = httpRequestTools.get(toUrl);
     //得到歌单详细信息json字符串
     JSONObject jsonObject = JSONObject.fromObject(resultJson);
@@ -127,9 +162,14 @@ public class TaskUpdateMusic {
       // 新增 歌单与歌曲之间桥梁的中间信息
       Track t = trackIds.get(i);
       t.setGdId(gdid);
-      trackService.addTrack(t);
       //添加完 (歌单与歌曲连接信息)后 添加歌曲信息
-      songService.addSong(getSong(t.getId()));
+      try {
+        songService.addSong(getSong(t.getId()));
+        trackService.addTrack(t);
+      }catch(Exception e){
+        log.error("歌曲ID[{}]新增数据库失败，原因",e.getMessage());
+      }
+
     }
     log.info("获取歌单内所有音乐成功;歌单ID:[{}];共获取该歌单 [{}] 条音乐",gdid,trackIds.size());
   }
@@ -141,7 +181,34 @@ public class TaskUpdateMusic {
    */
   public song getSong(String id){
     log.info("准备获取歌曲 ID:[{}] 的信息",id);
-    String getSongUrl = "https://musicapi.leanapp.cn/song/detail?ids="+id;
+    String getSongUrl = "http://47.99.165.122:3000/song/detail?ids="+id;
+    // 创建 异步线程类 获取音乐url
+    /*
+    class music implements Callable<String>{
+      private String id;
+      public music (String id){
+        this.id = id;
+      }
+      @Override
+      public String call() throws Exception {
+        //根据Id 查询音乐UR；
+        log.info("开始获取ID: [{}] 的具体音乐URL",this.id);
+        String getMusicUrl = "https://musicapi.leanapp.cn/music/url?id="+this.id;
+        String jsonStr = httpRequestTools.get(getMusicUrl);
+        JSONObject jsonObject = JSONObject.fromObject(jsonStr);
+        String dataStr = jsonObject.get("data").toString();
+        //得到音乐url对象
+        JSONObject dataObject = JSONObject.fromObject(dataStr.substring(1,dataStr.length() - 1));
+        //返回音乐URl
+        String url = dataObject.get("url").toString();
+        log.info("获取ID: [{}] 的具体音乐URL成功,URL:[{}]",this.id,url);
+        return url;
+      }
+    }
+    FutureTask<String> futureTask = new FutureTask<String>(new music(id));
+    futureTask.run();
+
+     */
     String songStr = httpRequestTools.get(getSongUrl);
     //得到歌曲json字符串
     String json = JSONObject.fromObject(songStr).get("songs").toString();
@@ -151,6 +218,15 @@ public class TaskUpdateMusic {
     JSONObject songObject = JSONObject.fromObject(json);
     // 创建歌曲实体类赋值
     song s = new song();
+    /*
+    try {
+      s.setUrl(futureTask.get());
+    }catch(Exception e){
+      log.error("获取音乐ID出错，原因[{}]",e.getMessage());
+    }
+    */
+
+
     s.setId(songObject.get("id").toString());
     s.setName(songObject.get("name").toString());
     s.setMvId(songObject.get("mv").toString());

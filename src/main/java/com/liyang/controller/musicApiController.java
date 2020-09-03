@@ -1,59 +1,80 @@
 package com.liyang.controller;
-
-import com.alibaba.fastjson.JSON;
-import com.liyang.pojo.track;
+import com.liyang.entity.Playlist;
+import com.liyang.entity.song;
+import com.liyang.json.jsonResult;
+import com.liyang.pojo.music;
+import com.liyang.service.*;
 import com.liyang.tools.httpRequestTools;
 import net.sf.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
+
 
 /**
  * 音乐api
  */
 @RestController
 @RequestMapping("/music")
-
+@CrossOrigin
 public class musicApiController extends baseController{
-  /**
-   * 根据 歌单ID 获取歌单下的音乐列表信息
-   * @param id
-   * @return
-   */
-  @RequestMapping(value = "/getSongs.json")
-  @ResponseBody
-  public String getSongs(String id){
-    if(id == null || "".equals(id)) {
-      return "参数错误";
-    }else{
-        String url = "https://musicapi.leanapp.cn/playlist/detail?id=" + id;
-        //得到歌单中的音乐列表ID
-        String str = httpRequestTools.get(url);
-        JSONObject jsonObject = JSONObject.fromObject(str);
-        //根据音乐ID获取具体音乐信息
-        JSONObject gqList = JSONObject.fromObject(jsonObject.get("playlist"));
-        //获取歌曲id集合
-        List<track> tList = JSON.parseArray(gqList.get("trackIds").toString(),track.class);
-        //拿到所有id集合 重新发起请求获取歌曲详细信息
-        System.out.println("歌曲id数量" + tList.size());
-        String pjStr = "[";
-        StringBuilder sb = new StringBuilder("[");
-        for(int i =0; i<tList.size();i++){
-          String songUrl = "https://musicapi.leanapp.cn/song/detail?ids=" + tList.get(i).getId();
-          String str2 = httpRequestTools.get(songUrl);
-          JSONObject jsonObject2 = JSONObject.fromObject(str2);
-          // 音乐
-          String sbStr = jsonObject2.get("songs").toString();
-          sbStr = sbStr.substring(sbStr.indexOf("[")+1,sbStr.length()-1);
-          sb.append(sbStr);
-          sb.append(",");
-       }
-        return sb.toString();
+  @Autowired
+  private playListService playListService;
+  @Autowired
+  private playListTimeService playListTimeService;
+  @Autowired
+  private songService songService;
+  @Autowired
+  private trackService trackService;
 
-      }
+  /**
+   * 根据 每日推荐歌单列表
+   * @param page
+   * @param limit
+   * @return jsonResult
+   */
+  @RequestMapping(value = "/getPlayList.json")
+  public jsonResult getPlayList(Playlist p) {
+    List<Playlist> list = playListService.queryPlayListPageAll(p);
+    return new jsonResult(list);
+  }
+
+  /**
+   *
+   * @param gdid 歌单ID
+   * @return jsonResult
+   */
+  @RequestMapping( value = "/getSongs.json")
+  public jsonResult getSongs(song s){
+    List<song> list = songService.querySongsPageAll(s);
+    return new jsonResult(list);
+  }
+
+  /**
+   *
+   * @param gdid 歌单ID
+   * @return jsonResult
+   */
+  @RequestMapping( value = "/getMusicAllByGdid.json")
+  public jsonResult MusicAllByGdid(song s){
+    List<music> list = songService.queryMusicAllByGdid(s);
+    for(int i = 0;i<list.size();i++){
+      //根据Id 查询音乐URL  音乐音乐url是有时效性的  必须 实时获取；
+      String getMusicUrl = "https://musicapi.leanapp.cn/music/url?id="+list.get(i).getId();
+      String jsonStr = httpRequestTools.get(getMusicUrl);
+      JSONObject jsonObject = JSONObject.fromObject(jsonStr);
+      String dataStr = jsonObject.get("data").toString();
+      //得到音乐url对象
+      JSONObject dataObject = JSONObject.fromObject(dataStr.substring(1,dataStr.length() - 1));
+      //返回音乐URl
+      String url = dataObject.get("url").toString();
+      list.get(i).setSrc(url);
+    }
+    return new jsonResult(list);
+  }
 
   }
 
-
-}

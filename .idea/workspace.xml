@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="liyang" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/json/jsonResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/pojo/music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/controller/musicApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/musicApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/entity/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/entity/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/entity/baseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/entity/baseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/entity/song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/entity/song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/PlaylistMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/PlaylistMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/PlaylisttimeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/PlaylisttimeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/TrackMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/TrackMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/songMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/songMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/SongServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/SongServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/playListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/playListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/playListTimeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/playListTimeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/trackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/trackServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/playListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/playListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/playListTimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/playListTimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/songService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/songService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/service/trackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/trackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/task/TaskUpdateMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/task/TaskUpdateMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/tools/dateTimeTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/tools/dateTimeTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/tools/httpRequestTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/tools/httpRequestTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlaylistMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PlaylistMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlaylisttimeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PlaylisttimeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/songMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/songMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/trackMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/trackMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/element/fonts/element-icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/element/fonts/element-icons.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/element/fonts/element-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/element/fonts/element-icons.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/epitome/css/font-awesome/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="museUi" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1gZeQGtfz4xhxkRmpVeWggVaBDE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\李杨\liyang\src\main\resources\mapper" />
+      <recent name="F:\李杨\liyang\src\main\resources\generator" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.liyang" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liyang.service.impl" />
+      <recent name="com.liyang.service" />
+      <recent name="com.liyang.mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\李杨\liyang\src\main\resources\mapper" />
+      <recent name="F:\李杨\liyang\src\main\resources" />
+      <recent name="F:\李杨\liyang\src\main\resources\static" />
+      <recent name="F:\李杨\liyang\src\main\resources\static\element\fonts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LiyangApplication">
+    <configuration name="TaskUpdateMusic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liyang.task.TaskUpdateMusic" />
+      <module name="liyang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liyang.task.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dateTimeTool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liyang.tools.dateTimeTool" />
+      <module name="liyang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liyang.tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LiyangApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="liyang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liyang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.liyang" />
+      <option name="MAIN_CLASS_NAME" value="com.liyang.LiyangApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LiyangApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="liyang" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.liyang.LiyangApplication" />
+      <option name="HIDE_BANNER" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="MakeProject" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.8" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/liyang/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="liyang">
+          <settings>
+            <option name="CONTEXT_PATH" value="/liyang_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_liyang" />
+      </server-settings>
+      <log_file alias="Tomcat Host Manager Log" path="%IDEA_RUN:CATALINA_BASE%/logs/host-manager.*" />
+      <log_file alias="Tomcat Localhost Access Log" path="%IDEA_RUN:CATALINA_BASE%/logs/localhost_access_log.*" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file enabled="true" id="Tomcat Manager" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="34289" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="liyang" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TaskUpdateMusic" />
+      <item itemvalue="JUnit.LiyangApplicationTests" />
+      <item itemvalue="Spring Boot.LiyangApplication" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.8" />
+      <item itemvalue="Application.dateTimeTool" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.dateTimeTool" />
+        <item itemvalue="JUnit.LiyangApplicationTests" />
+        <item itemvalue="Application.TaskUpdateMusic" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.20480612" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="" />
+      <created>1598326524061</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598326524061</updated>
+      <workItem from="1598326529726" duration="14159000" />
+      <workItem from="1598599850123" duration="54139000" />
+      <workItem from="1599014803593" duration="13430000" />
+      <workItem from="1599039153651" duration="5855000" />
+    </task>
+    <task id="LOCAL-00001" summary="第一次">
+      <created>1598691264833</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598691264833</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="513" y="97" key="#Project_Structure" timestamp="1598341905867">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="513" y="97" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1598341905867" />
+    <state x="414" y="169" width="1215" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598341914125">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="169" width="1215" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598341914125" />
+    <state x="548" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598342109527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="548" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598342109527" />
+    <state x="558" y="271" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1598337407289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="558" y="271" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598337407289" />
+    <state x="1115" y="169" key="#com.intellij.ide.util.MemberChooser" timestamp="1599035876733">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1115" y="169" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599035876733" />
+    <state x="603" y="434" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1598327226497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="603" y="434" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598327226497" />
+    <state x="678" y="383" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1598327228586">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="678" y="383" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1598327228586" />
+    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598666111409">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598666111409" />
+    <state x="829" y="576" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598605075226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="829" y="576" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1598605075226" />
+    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1598691261401">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1598691261401" />
+    <state width="492" height="582" key="DebuggerActiveHint" timestamp="1599019621165">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="492" height="582" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1599019621165" />
+    <state x="690" y="219" key="FileChooserDialogImpl" timestamp="1598691181485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598691181485" />
+    <state x="720" y="416" key="Github.CreateGistDialog" timestamp="1598691102916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="416" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598691102916" />
+    <state width="1868" height="214" key="GridCell.Tab.0.bottom" timestamp="1599098647683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647683" />
+    <state width="1868" height="214" key="GridCell.Tab.0.center" timestamp="1599098647683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647683" />
+    <state width="1868" height="214" key="GridCell.Tab.0.left" timestamp="1599098647682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647682" />
+    <state width="1868" height="214" key="GridCell.Tab.0.right" timestamp="1599098647683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647683" />
+    <state width="1868" height="214" key="GridCell.Tab.1.bottom" timestamp="1599098647683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647683" />
+    <state width="1868" height="214" key="GridCell.Tab.1.center" timestamp="1599098647683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647683" />
+    <state width="1868" height="214" key="GridCell.Tab.1.left" timestamp="1599098647683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647683" />
+    <state width="1868" height="214" key="GridCell.Tab.1.right" timestamp="1599098647683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="214" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599098647683" />
+    <state width="1868" height="366" key="GridCell.Tab.2.bottom" timestamp="1599019518748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="366" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
+    <state width="1868" height="366" key="GridCell.Tab.2.center" timestamp="1599019518748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="366" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
+    <state width="1868" height="366" key="GridCell.Tab.2.left" timestamp="1599019518748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="366" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
+    <state width="1868" height="366" key="GridCell.Tab.2.right" timestamp="1599019518748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1868" height="366" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
+    <state width="1455" height="189" key="GridCell.Tab.3.bottom" timestamp="1598342250221">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
+    <state width="1455" height="189" key="GridCell.Tab.3.center" timestamp="1598342250221">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
+    <state width="1455" height="189" key="GridCell.Tab.3.left" timestamp="1598342250221">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
+    <state width="1455" height="189" key="GridCell.Tab.3.right" timestamp="1598342250221">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
+    <state width="1455" height="189" key="GridCell.Tab.4.bottom" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state width="1455" height="189" key="GridCell.Tab.4.center" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state width="1455" height="189" key="GridCell.Tab.4.left" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state width="1455" height="189" key="GridCell.Tab.4.right" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state width="1455" height="189" key="GridCell.Tab.5.bottom" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.5.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state width="1455" height="189" key="GridCell.Tab.5.center" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.5.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state width="1455" height="189" key="GridCell.Tab.5.left" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.5.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state width="1455" height="189" key="GridCell.Tab.5.right" timestamp="1598342250222">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="189" key="GridCell.Tab.5.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
+    <state x="443" y="140" key="Registry" timestamp="1598328778640">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="443" y="140" key="Registry/0.0.1920.1040@0.0.1920.1040" timestamp="1598328778640" />
+    <state x="382" y="0" key="SettingsEditor" timestamp="1598691096375">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="382" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598691096375" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1598691493566">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1598691493566" />
+    <state x="0" y="307" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1598341153318">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="307" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598341153318" />
+    <state x="596" y="268" key="git4idea.merge.GitPullDialog" timestamp="1598834650921">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="596" y="268" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598834650921" />
+    <state x="642" y="85" key="refactoring.ChangeSignatureDialog" timestamp="1598672575554">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="642" y="85" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598672575554" />
+    <state x="532" y="231" width="840" height="1034" key="run.anything.popup" timestamp="1598342286130">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="532" y="231" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598342286130" />
+    <state x="541" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1598601113722">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="541" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598601113722" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/liyang/task/TaskUpdateMusic.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

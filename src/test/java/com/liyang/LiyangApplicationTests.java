@@ -1,6 +1,7 @@
 package com.liyang;
 
 import com.alibaba.fastjson.JSON;
+import com.liyang.entity.Playlist;
 import com.liyang.entity.Track;
 import com.liyang.service.playListService;
 import com.liyang.service.playListTimeService;
@@ -11,6 +12,8 @@ import com.liyang.tools.httpRequestTools;
 import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -20,6 +23,7 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class LiyangApplicationTests {
+  public Logger log = LoggerFactory.getLogger(LiyangApplicationTests.class);
   @Autowired
   public playListService service;
   @Autowired
@@ -31,27 +35,6 @@ public class LiyangApplicationTests {
 
   @Test
   public void contextLoads() {
-    //根据歌单Id 查询详细的歌单信息
-    String toUrl = "https://musicapi.leanapp.cn/playlist/detail?id=2409342460";
-    String resultJson = httpRequestTools.get(toUrl);
-    //得到歌单详细信息json字符串
-    JSONObject jsonObject = JSONObject.fromObject(resultJson);
-    String gdJson = jsonObject.get("playlist").toString();
-    //获取歌单内的歌曲ID集合
-    JSONObject trackObject = JSONObject.fromObject(gdJson);
-    List<Track> trackIds = (List<Track>) JSON.parseArray(trackObject.get("trackIds").toString(),Track.class);
-    System.out.println("歌曲数量：" +trackIds.size());
-    // 新增歌曲到数据库
-    for (int i = 0; i<trackIds.size();i++){
-      System.out.println(trackIds.get(i).getId());
-      // 新增 歌单与歌曲之间桥梁的中间信息
-      Track t = trackIds.get(i);
-      t.setGdId("2409342460");
-      service3.addTrack(t);
-      //添加完 (歌单与歌曲连接信息)后 添加歌曲信息
-      TaskUpdateMusic task = new TaskUpdateMusic();
-      service4.addSong(task.getSong(t.getId()));
-    }
 
   }
 

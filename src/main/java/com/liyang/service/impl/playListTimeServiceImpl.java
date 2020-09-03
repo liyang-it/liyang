@@ -14,4 +14,9 @@ public class playListTimeServiceImpl implements playListTimeService {
   public int addPlayListTime(String s) {
     return mapper.addPlayListTime(s);
   }
+
+  @Override
+  public int deletePlayListTime() {
+    return mapper.deletePlayListTime();
+  }
 }

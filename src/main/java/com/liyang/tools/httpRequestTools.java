@@ -1,6 +1,8 @@
 package com.liyang.tools;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -8,6 +10,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class httpRequestTools {
+  public static Logger log = LoggerFactory.getLogger(httpRequestTools.class);
   public static String get(String toUrl) {
     StringBuffer sb = new StringBuffer();
     try {
@@ -35,9 +38,10 @@ public class httpRequestTools {
       inputStream.close();
       //System.out.println("请求返回值：" + sb.toString());
     } catch (MalformedURLException e) {
-      System.out.println("创建URL对象失败！原因" + e.getMessage());
+      log.error("创建URL对象失败！原因 [{}],URL: [{}]",e.getMessage(),toUrl);
     } catch (IOException io){
-      System.out.println("打开http连接对象失败！原因" + io.getMessage());
+      log.error("打开http连接对象失败！原因 [{}], URL: [{}]",io.getMessage(),toUrl);
+      io.printStackTrace();
     }
     return sb.toString();
   }

@@ -11,14 +11,20 @@ import java.util.List;
 public class playListServiceImpl implements playListService {
   @Autowired
   public PlaylistMapper mapper;
-  @Override
-  public List<Playlist> queryPlayListAll() {
-    System.out.println("mapper"+mapper);
-    return mapper.queryPlayListAll();
-  }
+
 
   @Override
   public int addPlayList(Playlist e) {
     return mapper.addPlayList(e);
+  }
+
+  @Override
+  public List<Playlist> queryPlayListPageAll(Playlist e) {
+    return mapper.queryPlayListPageAll(e);
+  }
+
+  @Override
+  public int deletePlayList() {
+    return mapper.deletePlayList();
   }
 }

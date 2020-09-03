@@ -4,5 +4,6 @@ import com.liyang.entity.Track;
 
 public interface TrackMapper {
   int addTrack(Track t);
+  int deleteTrack();
 
 }

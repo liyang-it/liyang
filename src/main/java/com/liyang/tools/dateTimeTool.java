@@ -1,6 +1,7 @@
 package com.liyang.tools;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class dateTimeTool {
@@ -17,6 +18,18 @@ public class dateTimeTool {
     return str;
   }
 
+  /**
+   * 当前日期 减1天
+   * @return
+   */
+  public static String getQtYmd(){
+    Date date = new Date();
+    Calendar c = Calendar.getInstance();
+    c.setTime(date);
+    c.add(Calendar.DAY_OF_MONTH,-1);
+    String format = ymd.format(c.getTime());
+    return format;
+  }
   /**
    * 获取 yyyy-MM-dd HH:ss 日期格式字符串
    * @return

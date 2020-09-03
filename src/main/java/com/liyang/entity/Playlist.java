@@ -52,7 +52,9 @@ public class Playlist extends baseEntity {
     }
 
     public Integer getPlaycount() {
-        return playcount;
+        Integer count = Math.round((playcount/10000));
+
+        return count;
     }
 
     public void setPlaycount(Integer playcount) {

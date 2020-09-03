@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="liyang">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>liyang</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="liyang.war">
+      <element id="artifact" artifact-name="liyang:war exploded" />
+    </root>
+  </artifact>
+</component>
