@@ -15,6 +15,15 @@ public class song extends baseEntity{
   private String mvId;//mvid
   private String url;//音乐地址
   private String gdid;
+  private String playListTimeid;
+
+  public String getPlayListTimeid() {
+    return playListTimeid;
+  }
+
+  public void setPlayListTimeid(String playListTimeid) {
+    this.playListTimeid = playListTimeid;
+  }
 
   public String getGdid() {
     return gdid;

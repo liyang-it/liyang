@@ -75,6 +75,16 @@ public class musicApiController extends baseController{
     }
     return new jsonResult(list);
   }
+  /**
+   *
+   * @param gdid 歌单ID
+   * @return jsonResult 不包含音乐url
+   */
+  @RequestMapping( value = "/getMusicAllByGdidNotUrl.json")
+  public jsonResult MusicAllByGdidNotUrl(song s){
+    List<music> list = songService.queryMusicAllByGdid(s);
+    return new jsonResult(list);
+  }
 
   }
 

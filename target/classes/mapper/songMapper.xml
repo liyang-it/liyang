@@ -12,6 +12,7 @@
         <result column="arName" jdbcType="VARCHAR" property="arName" />
         <result column="mvId" jdbcType="VARCHAR" property="mvId" />
         <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="playListTimeid" jdbcType="VARCHAR" property="playListTimeid" />
     </resultMap>
     <resultMap id="musicResultMap" type="com.liyang.pojo.music">
         <result column="id" jdbcType="VARCHAR" property="id" />
@@ -26,9 +27,9 @@
     </select>
     <insert id="addSong" parameterType="com.liyang.entity.song" >
         insert into song
-            (id,name,alId,alName,alPic,alPicUrl,arId,arName,mvId,url)
+            (id,name,alId,alName,alPic,alPicUrl,arId,arName,mvId,url,playListTimeid)
             values
-             (#{id}, #{name}, #{alId}, #{alName}, #{alPic}, #{alPicUrl}, #{arId}, #{arName}, #{mvId}, #{url})
+             (#{id}, #{name}, #{alId}, #{alName}, #{alPic}, #{alPicUrl}, #{arId}, #{arName}, #{mvId}, #{url}, #{playListTimeid})
     </insert>
 
     <select id="querySongsPageAll" resultMap="BaseResultMap" parameterType="com.liyang.entity.song">

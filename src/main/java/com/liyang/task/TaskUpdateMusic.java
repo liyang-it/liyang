@@ -47,11 +47,37 @@ public class TaskUpdateMusic {
 
   public Logger log = LoggerFactory.getLogger(TaskUpdateMusic.class);
   /**
-   * 每天 2点 删除所有数据
+   * 每天 1点刷新
    */
-  /*
-  @Scheduled(cron = "0 0 2 * * ? ")
-  public void delPlayList(){
+  @Scheduled(cron = "0 0 1 * * ? ")
+  public void delPlayList1(){
+    this.runDelMusic();
+    this.runAddMusic();
+  }
+
+  /**
+   * 每天 10点刷新
+   */
+  @Scheduled(cron = "0 0 10 * * ? ")
+  public void delPlayList2(){
+    this.runDelMusic();
+    this.runAddMusic();
+  }
+
+  /**
+   * 每天 16点刷新
+   */
+  @Scheduled(cron = "0 0 16 * * ? ")
+  public void delPlayList3(){
+    this.runDelMusic();
+    this.runAddMusic();
+  }
+
+
+  /**
+   * 删除音乐任务
+   */
+  public void runDelMusic(){
     long startTime = System.currentTimeMillis();
     log.info("开始 删除所有歌曲信息");
     int si = songService.deleteSong();
@@ -65,17 +91,11 @@ public class TaskUpdateMusic {
     long stopTime = System.currentTimeMillis();
     log.info("日期 :[{}]; 每日推荐歌单列表更新成功;一共耗时 [{}] 秒",dateTimeTool.getYmd(),(stopTime - startTime)/1000);
   }
-//
-//  public static void main(String[] args) {
-//    TaskUpdateMusic task = new TaskUpdateMusic();
-//    task.setPlayList();
-//  }
-*/
+
   /**
-   * 每天 4点 获取网易云每日推荐歌单列表  插入到数据库中
+   * 新增音乐任务
    */
-  @Scheduled(cron = "0 33 8 * * ? ")
-  public void setPlayList(){
+  public void runAddMusic(){
     log.info("开始 跟新每日歌单信息");
     long startTime = System.currentTimeMillis();
     //默认登录信息
@@ -91,13 +111,12 @@ public class TaskUpdateMusic {
       p.setPlaylisttimeid(ymdStr);
       playListService.addPlayList(p);
       //获取歌单内所有音乐并且新增到数据库
-      addSong(p.getId());
+      addSong(p.getId(),ymdStr);
     }
     playListTimeService.addPlayListTime(ymdStr);//新增 当天日期信息
     long stopTime = System.currentTimeMillis();
     log.info("日期 :[{}]; 每日推荐歌单列表更新成功;一共耗时 [{}] 秒",dateTimeTool.getYmd(),(stopTime - startTime)/1000);
   }
-
   /**
    *  每日登录网易云获取  每日推荐歌单列表
    * @param phone 手机号
@@ -146,7 +165,7 @@ public class TaskUpdateMusic {
    * 根据歌单ID 查询歌单下的所有歌曲新增到数据库
    * @param gdid
    */
-  public void addSong(String  gdid){
+  public void addSong(String  gdid,String ymdStr){
     //根据歌单Id 查询详细的歌单信息
     log.info("准备获取歌单内所有歌曲信息 ;歌单ID[{}]",gdid);
     String toUrl = "http://47.99.165.122:3000/playlist/detail?id="+gdid;
@@ -159,12 +178,12 @@ public class TaskUpdateMusic {
     List<Track> trackIds = (List<Track>) JSON.parseArray(trackObject.get("trackIds").toString(),Track.class);
     // 新增歌曲到数据库
     for (int i = 0; i<trackIds.size();i++){
-      // 新增 歌单与歌曲之间桥梁的中间信息
+      // 新增 歌单与歌曲之间桥梁的中间信息 ---
       Track t = trackIds.get(i);
       t.setGdId(gdid);
       //添加完 (歌单与歌曲连接信息)后 添加歌曲信息
       try {
-        songService.addSong(getSong(t.getId()));
+        songService.addSong(getSong(t.getId(),ymdStr));
         trackService.addTrack(t);
       }catch(Exception e){
         log.error("歌曲ID[{}]新增数据库失败，原因",e.getMessage());
@@ -179,7 +198,7 @@ public class TaskUpdateMusic {
    * @param id 歌曲id
    * @return
    */
-  public song getSong(String id){
+  public song getSong(String id,String ymdStr){
     log.info("准备获取歌曲 ID:[{}] 的信息",id);
     String getSongUrl = "http://47.99.165.122:3000/song/detail?ids="+id;
     // 创建 异步线程类 获取音乐url
@@ -243,6 +262,7 @@ public class TaskUpdateMusic {
     JSONObject arObject = JSONObject.fromObject(arJson);
     s.setArId(arObject.get("id").toString());
     s.setArName(arObject.get("name").toString());
+    s.setPlayListTimeid(ymdStr);
     log.info("成功获取到音乐详细信息 ,ID:[{}],信息: [{}]",id,s);
     return s;
   }
