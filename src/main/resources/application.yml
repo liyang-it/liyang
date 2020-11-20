@@ -5,8 +5,10 @@ spring:
     url: jdbc:mysql://47.99.165.122:3306/liyang?useUnicode=true&characterEncoding=utf-8&useSSL=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=CTT
     driver-class-name: com.mysql.jdbc.Driver
   ##配置项目访问名
-  servlet:
-    context-path: /liyang
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
 mybatis:
     # 映射mapper .xml文件位置
   mapper-locations: classpath:mapper/*Mapper.xml
@@ -23,6 +25,10 @@ logging:
     org.springfromework.web: INFO
     org.hibernate: ERROR
   #采用相对路径方式将日志文件输出到【log/myspringboot.log】
-  file: ./log/springboot.log
+  file: E:/log/springboot.log
   #采用绝对路径方式将日志文件输出到【/Users/wang/Downloads/myspringboot.log】
   #file: /Users/wang/Downloads/myspringboot.log
+server:
+  port: 8888
+  servlet:
+    context-path: /liyang
