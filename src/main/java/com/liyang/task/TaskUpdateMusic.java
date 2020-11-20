@@ -47,33 +47,31 @@ public class TaskUpdateMusic {
 
   public Logger log = LoggerFactory.getLogger(TaskUpdateMusic.class);
   /**
-   * 每天 1点刷新
+   * 每天 5点刷新
    */
-  @Scheduled(cron = "0 0 1 * * ? ")
+  @Scheduled(cron = "0 0 5 * * ? ")
   public void delPlayList1(){
     this.runDelMusic();
     this.runAddMusic();
   }
 
   /**
-   * 每天 10点刷新
+   * 每天 13点刷新
    */
-  @Scheduled(cron = "0 0 10 * * ? ")
+  @Scheduled(cron = "0 0 13 * * ? ")
   public void delPlayList2(){
     this.runDelMusic();
     this.runAddMusic();
   }
 
   /**
-   * 每天 16点刷新
+   * 每天 17点刷新
    */
-  @Scheduled(cron = "0 0 16 * * ? ")
+  @Scheduled(cron = "0 0 17 * * ? ")
   public void delPlayList3(){
     this.runDelMusic();
     this.runAddMusic();
   }
-
-
   /**
    * 删除音乐任务
    */
@@ -107,11 +105,12 @@ public class TaskUpdateMusic {
     List<Playlist> list = getPlayList(phone,password,162); //获取歌单 列表
     for (int i = 0;i <list.size();i++){
       //新增歌单详细信息
+      //获取歌单内所有音乐并且新增到数据库
+      addSong(list.get(i).getId(),ymdStr);
       Playlist p = list.get(i);
       p.setPlaylisttimeid(ymdStr);
       playListService.addPlayList(p);
-      //获取歌单内所有音乐并且新增到数据库
-      addSong(p.getId(),ymdStr);
+
     }
     playListTimeService.addPlayListTime(ymdStr);//新增 当天日期信息
     long stopTime = System.currentTimeMillis();
@@ -166,31 +165,37 @@ public class TaskUpdateMusic {
    * @param gdid
    */
   public void addSong(String  gdid,String ymdStr){
-    //根据歌单Id 查询详细的歌单信息
-    log.info("准备获取歌单内所有歌曲信息 ;歌单ID[{}]",gdid);
-    String toUrl = "http://47.99.165.122:3000/playlist/detail?id="+gdid;
-    String resultJson = httpRequestTools.get(toUrl);
-    //得到歌单详细信息json字符串
-    JSONObject jsonObject = JSONObject.fromObject(resultJson);
-    String gdJson = jsonObject.get("playlist").toString();
-    //获取歌单内的歌曲ID集合
-    JSONObject trackObject = JSONObject.fromObject(gdJson);
-    List<Track> trackIds = (List<Track>) JSON.parseArray(trackObject.get("trackIds").toString(),Track.class);
-    // 新增歌曲到数据库
-    for (int i = 0; i<trackIds.size();i++){
-      // 新增 歌单与歌曲之间桥梁的中间信息 ---
-      Track t = trackIds.get(i);
-      t.setGdId(gdid);
-      //添加完 (歌单与歌曲连接信息)后 添加歌曲信息
-      try {
-        songService.addSong(getSong(t.getId(),ymdStr));
-        trackService.addTrack(t);
-      }catch(Exception e){
-        log.error("歌曲ID[{}]新增数据库失败，原因",e.getMessage());
+    try {
+//根据歌单Id 查询详细的歌单信息
+      log.info("准备获取歌单内所有歌曲信息 ;歌单ID[{}]",gdid);
+      String toUrl = "http://47.99.165.122:3000/playlist/detail?id="+gdid;
+      String resultJson = httpRequestTools.get(toUrl);
+      //得到歌单详细信息json字符串
+      JSONObject jsonObject = JSONObject.fromObject(resultJson);
+      String gdJson = jsonObject.get("playlist").toString();
+      //获取歌单内的歌曲ID集合
+      JSONObject trackObject = JSONObject.fromObject(gdJson);
+      List<Track> trackIds = (List<Track>) JSON.parseArray(trackObject.get("trackIds").toString(),Track.class);
+      // 新增歌曲到数据库
+      for (int i = 0; i<trackIds.size();i++){
+        // 新增 歌单与歌曲之间桥梁的中间信息 ---
+        Track t = trackIds.get(i);
+        t.setGdId(gdid);
+        //添加完 (歌单与歌曲连接信息)后 添加歌曲信息
+        try {
+          songService.addSong(getSong(t.getId(),ymdStr));
+          trackService.addTrack(t);
+        }catch(Exception e){
+          log.error("歌曲ID[{}]新增数据库失败，原因",e.getMessage());
+        }
+
       }
+      log.info("获取歌单内所有音乐成功;歌单ID:[{}];共获取该歌单 [{}] 条音乐",gdid,trackIds.size());
+    }catch (Exception e){
+      log.error("获取歌单 所有歌曲失败");
 
     }
-    log.info("获取歌单内所有音乐成功;歌单ID:[{}];共获取该歌单 [{}] 条音乐",gdid,trackIds.size());
+
   }
 
   /**
