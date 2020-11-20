@@ -32,8 +32,6 @@ public class musicApiController extends baseController{
 
   /**
    * 根据 每日推荐歌单列表
-   * @param page
-   * @param limit
    * @return jsonResult
    */
   @RequestMapping(value = "/getPlayList.json")
