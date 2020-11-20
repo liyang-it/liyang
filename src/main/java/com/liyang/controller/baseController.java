@@ -5,6 +5,7 @@ import com.liyang.result.resultData;
 public class baseController {
   public resultData resultData = new resultData();
   public resultData errorResult(int code,String msg){
+
     resultData.setCode(code);
     resultData.setMsg(msg);
     return resultData;
