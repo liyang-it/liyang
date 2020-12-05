@@ -58,20 +58,20 @@ public class TaskUpdateMusic {
   /**
    * 每天 13点刷新
    */
-  @Scheduled(cron = "0 0 13 * * ? ")
-  public void delPlayList2(){
-    this.runDelMusic();
-    this.runAddMusic();
-  }
-
-  /**
-   * 每天 17点刷新
-   */
-  @Scheduled(cron = "0 0 17 * * ? ")
-  public void delPlayList3(){
-    this.runDelMusic();
-    this.runAddMusic();
-  }
+//  @Scheduled(cron = "0 0 13 * * ? ")
+//  public void delPlayList2(){
+//    this.runDelMusic();
+//    this.runAddMusic();
+//  }
+//
+//  /**
+//   * 每天 17点刷新
+//   */
+//  @Scheduled(cron = "0 0 17 * * ? ")
+//  public void delPlayList3(){
+//    this.runDelMusic();
+//    this.runAddMusic();
+//  }
   /**
    * 删除音乐任务
    */
