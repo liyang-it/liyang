@@ -1,9 +1,12 @@
 package com.liyang.json;
 
 public class jsonResult<T> {
-  private Integer code;
-  private String msg;
-  private T data;
+  private static Integer code;
+  private static String msg;
+  private  T data;
+
+  public jsonResult() {
+  }
 
   public jsonResult(T data) {
     this.code = 200;
@@ -15,7 +18,12 @@ public class jsonResult<T> {
     this.code = code;
     this.msg = msg;
   }
-
+  public static jsonResult resultError(String message){
+    jsonResult r = new jsonResult();
+    r.setCode(500);
+    r.setMsg(message);
+    return r;
+  }
   public void setCode(Integer code) {
     this.code = code;
   }

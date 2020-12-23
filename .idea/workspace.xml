@@ -6,21 +6,123 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log/springboot.log.2020-09-03.1.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/springboot.log.2020-09-07.0.gz" afterDir="false" />
+    <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="修改 全局异常控制器">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/springboot.log.2020-09-07.1.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/config/redis/redisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/liyangitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/systemAsNumberMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/pojo/systemAsNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/impl/systemAsNumberServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/systemAsNumberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/task/saveAccessNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/tools/redisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/systemAsNumberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/liyang_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/liyang_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_reactive_2_1_16_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_16_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liyang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/liyang.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/springboot.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/springboot.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/controller/musicApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/musicApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/entity/song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/entity/song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/task/TaskUpdateMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/task/TaskUpdateMusic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlaylistMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PlaylistMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/songMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/songMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/controller/musicApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liyang/controller/musicApiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/entity/song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liyang/entity/song.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/task/TaskUpdateMusic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/liyang/task/TaskUpdateMusic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PlaylistMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PlaylistMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/songMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/songMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/controller/exceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/exceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/controller/pageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/json/jsonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/json/jsonResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/tools/httpRequestTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/tools/httpRequestTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/foot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/LiyangApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/ServletInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/config/mvc/staticResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/controller/baseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/controller/musicApiController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/controller/pageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/entity/Playlist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/entity/Playlisttime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/entity/Track.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/entity/baseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/entity/song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/json/jsonResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/mapper/PlaylistMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/mapper/PlaylisttimeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/mapper/TrackMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/mapper/songMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/pojo/gdPojo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/pojo/music.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/pojo/playlist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/pojo/track.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/result/resultData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/impl/SongServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/impl/playListServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/impl/playListTimeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/impl/trackServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/playListService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/playListTimeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/songService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/service/trackService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/task/TaskUpdateMusic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/tools/dateTimeTool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/liyang/tools/httpRequestTools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generator/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PlaylistMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PlaylisttimeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/songMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/trackMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element/fonts/element-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element/fonts/element-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fa-brands.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fa-brands.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fa-regular.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fa-regular.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fa-solid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fa-solid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fontawesome-all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fontawesome-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fontawesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/css/fontawesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/font-awesome/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/css/vendor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/images/hero-pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/images/services-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/js/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/js/modernizr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/js/pace.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/epitome/js/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/foot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/liyang/LiyangApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +132,27 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="museUi" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -78,7 +195,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,23 +208,23 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\李杨\liyang\src\main\resources\mapper" />
-      <recent name="F:\李杨\liyang\src\main\resources\generator" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.liyang" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.liyang.service.impl" />
-      <recent name="com.liyang.service" />
-      <recent name="com.liyang.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\李杨\liyang\src\main\resources\mapper" />
       <recent name="F:\李杨\liyang\src\main\resources" />
       <recent name="F:\李杨\liyang\src\main\resources\static" />
       <recent name="F:\李杨\liyang\src\main\resources\static\element\fonts" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.liyang.service.impl" />
+      <recent name="com.liyang.service" />
+      <recent name="com.liyang.mapper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\李杨\liyang\src\main\resources\mapper" />
+      <recent name="F:\李杨\liyang\src\main\resources\generator" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.LiyangApplication">
@@ -148,6 +265,22 @@
       <option name="PACKAGE_NAME" value="com.liyang" />
       <option name="MAIN_CLASS_NAME" value="com.liyang.LiyangApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LiyangApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="liyang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liyang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.liyang" />
+      <option name="MAIN_CLASS_NAME" value="com.liyang.LiyangApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -240,14 +373,16 @@
       <item itemvalue="Application.TaskUpdateMusic" />
       <item itemvalue="Application.dateTimeTool" />
       <item itemvalue="JUnit.LiyangApplicationTests" />
+      <item itemvalue="JUnit.LiyangApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.LiyangApplication" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.8" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LiyangApplicationTests.contextLoads" />
+        <item itemvalue="Application.TaskUpdateMusic" />
         <item itemvalue="Application.dateTimeTool" />
         <item itemvalue="JUnit.LiyangApplicationTests" />
-        <item itemvalue="Application.TaskUpdateMusic" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +420,13 @@
       <workItem from="1599039153651" duration="11015000" />
       <workItem from="1599440260219" duration="510000" />
       <workItem from="1599441117539" duration="12939000" />
-      <workItem from="1599613420556" duration="2092000" />
+      <workItem from="1599613420556" duration="2213000" />
+      <workItem from="1604463568345" duration="10915000" />
+      <workItem from="1604566747089" duration="70000" />
+      <workItem from="1605838453687" duration="5806000" />
+      <workItem from="1607150564288" duration="1962000" />
+      <workItem from="1607300811377" duration="241000" />
+      <workItem from="1608689210168" duration="9200000" />
     </task>
     <task id="LOCAL-00001" summary="第一次">
       <created>1598691264833</created>
@@ -301,7 +442,70 @@
       <option name="project" value="LOCAL" />
       <updated>1599098752656</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改音乐接口获取方式，优化每日三次定时更新音乐歌单">
+      <created>1599636401677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599636401677</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改 全局异常控制器">
+      <created>1605842330042</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605842330042</updated>
+    </task>
+    <task id="LOCAL-00005" summary="重新提交---未更改">
+      <created>1605842509977</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605842509977</updated>
+    </task>
+    <task id="LOCAL-00006" summary="重新提交---未更改">
+      <created>1605842679816</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605842679816</updated>
+    </task>
+    <task id="LOCAL-00007" summary="关闭SpringBoot 错误自动映射">
+      <created>1605842802486</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605842802486</updated>
+    </task>
+    <task id="LOCAL-00008" summary="去掉SpringBoot Web 模版引擎，项目重新改为APi接口方式，不使用页面功能">
+      <created>1605842889112</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605842889112</updated>
+    </task>
+    <task id="LOCAL-00009" summary="重新提交---未更改">
+      <created>1605843120083</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605843120083</updated>
+    </task>
+    <task id="LOCAL-00010" summary="修改定时任务 执行时间">
+      <created>1605843515596</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605843515596</updated>
+    </task>
+    <task id="LOCAL-00011" summary="更改 每日定时更新数据次数">
+      <created>1607153307751</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607153307751</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,188 +514,85 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次" />
     <MESSAGE value="修改每日22点更新音乐歌单数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改每日22点更新音乐歌单数据" />
+    <MESSAGE value="修改音乐接口获取方式，优化每日三次定时更新音乐歌单" />
+    <MESSAGE value="修改 全局异常控制器" />
+    <MESSAGE value="关闭SpringBoot 错误自动映射" />
+    <MESSAGE value="去掉SpringBoot Web 模版引擎，项目重新改为APi接口方式，不使用页面功能" />
+    <MESSAGE value="重新提交---未更改" />
+    <MESSAGE value="修改定时任务 执行时间" />
+    <MESSAGE value="更改 每日定时更新数据次数" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改 每日定时更新数据次数" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="513" y="97" key="#Project_Structure" timestamp="1598341905867">
+    <state x="721" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1608704959362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="513" y="97" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1598341905867" />
-    <state x="414" y="169" width="1215" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598341914125">
+    <state x="721" y="150" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608704959362" />
+    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605839219812">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="169" width="1215" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598341914125" />
-    <state x="548" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598342109527">
+    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605839219812" />
+    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1608714532735">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="548" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598342109527" />
-    <state x="558" y="271" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1598337407289">
+    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1608714532735" />
+    <state x="690" y="219" key="FileChooserDialogImpl" timestamp="1607301055157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="558" y="271" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598337407289" />
-    <state x="1115" y="169" key="#com.intellij.ide.util.MemberChooser" timestamp="1599452633438">
+    <state x="690" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607301055157" />
+    <state width="1868" height="259" key="GridCell.Tab.0.bottom" timestamp="1608714472165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1115" y="169" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599452633438" />
-    <state x="603" y="434" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1598327226497">
+    <state width="1868" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608714472165" />
+    <state width="1868" height="259" key="GridCell.Tab.0.center" timestamp="1608714472165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="603" y="434" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598327226497" />
-    <state x="678" y="383" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1598327228586">
+    <state width="1868" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608714472165" />
+    <state width="1868" height="259" key="GridCell.Tab.0.left" timestamp="1608714472164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="678" y="383" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1598327228586" />
-    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598666111409">
+    <state width="1868" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608714472164" />
+    <state width="1868" height="259" key="GridCell.Tab.0.right" timestamp="1608714472165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598666111409" />
-    <state x="829" y="576" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598605075226">
+    <state width="1868" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608714472165" />
+    <state width="1868" height="210" key="GridCell.Tab.1.bottom" timestamp="1608713810165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="829" y="576" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1598605075226" />
-    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1599098750619">
+    <state width="1868" height="210" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608713810165" />
+    <state width="1868" height="210" key="GridCell.Tab.1.center" timestamp="1608713810165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1599098750619" />
-    <state width="492" height="582" key="DebuggerActiveHint" timestamp="1599019621165">
+    <state width="1868" height="210" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608713810165" />
+    <state width="1868" height="210" key="GridCell.Tab.1.left" timestamp="1608713810165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="492" height="582" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1599019621165" />
-    <state x="690" y="219" key="FileChooserDialogImpl" timestamp="1598691181485">
+    <state width="1868" height="210" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608713810165" />
+    <state width="1868" height="210" key="GridCell.Tab.1.right" timestamp="1608713810165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598691181485" />
-    <state x="720" y="416" key="Github.CreateGistDialog" timestamp="1598691102916">
+    <state width="1868" height="210" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608713810165" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1607153311409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="720" y="416" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598691102916" />
-    <state width="1868" height="109" key="GridCell.Tab.0.bottom" timestamp="1599557773239">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607153311409" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1608696884172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="109" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599557773239" />
-    <state width="1868" height="109" key="GridCell.Tab.0.center" timestamp="1599557773239">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="109" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599557773239" />
-    <state width="1868" height="109" key="GridCell.Tab.0.left" timestamp="1599557773239">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="109" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599557773239" />
-    <state width="1868" height="109" key="GridCell.Tab.0.right" timestamp="1599557773239">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="109" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599557773239" />
-    <state width="1868" height="109" key="GridCell.Tab.1.bottom" timestamp="1599469743617">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="109" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599469743617" />
-    <state width="1868" height="109" key="GridCell.Tab.1.center" timestamp="1599469743617">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="109" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599469743617" />
-    <state width="1868" height="109" key="GridCell.Tab.1.left" timestamp="1599469743617">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="109" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599469743617" />
-    <state width="1868" height="109" key="GridCell.Tab.1.right" timestamp="1599469743617">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="109" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599469743617" />
-    <state width="1868" height="366" key="GridCell.Tab.2.bottom" timestamp="1599019518748">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="366" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
-    <state width="1868" height="366" key="GridCell.Tab.2.center" timestamp="1599019518748">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="366" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
-    <state width="1868" height="366" key="GridCell.Tab.2.left" timestamp="1599019518748">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="366" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
-    <state width="1868" height="366" key="GridCell.Tab.2.right" timestamp="1599019518748">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1868" height="366" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599019518748" />
-    <state width="1455" height="189" key="GridCell.Tab.3.bottom" timestamp="1598342250221">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
-    <state width="1455" height="189" key="GridCell.Tab.3.center" timestamp="1598342250221">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
-    <state width="1455" height="189" key="GridCell.Tab.3.left" timestamp="1598342250221">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
-    <state width="1455" height="189" key="GridCell.Tab.3.right" timestamp="1598342250221">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250221" />
-    <state width="1455" height="189" key="GridCell.Tab.4.bottom" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state width="1455" height="189" key="GridCell.Tab.4.center" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state width="1455" height="189" key="GridCell.Tab.4.left" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state width="1455" height="189" key="GridCell.Tab.4.right" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state width="1455" height="189" key="GridCell.Tab.5.bottom" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.5.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state width="1455" height="189" key="GridCell.Tab.5.center" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.5.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state width="1455" height="189" key="GridCell.Tab.5.left" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.5.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state width="1455" height="189" key="GridCell.Tab.5.right" timestamp="1598342250222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1455" height="189" key="GridCell.Tab.5.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598342250222" />
-    <state x="443" y="140" key="Registry" timestamp="1598328778640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="443" y="140" key="Registry/0.0.1920.1040@0.0.1920.1040" timestamp="1598328778640" />
-    <state x="382" y="0" key="SettingsEditor" timestamp="1598691096375">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="382" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598691096375" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1599098757685">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1599098757685" />
-    <state x="0" y="307" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1598341153318">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="307" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598341153318" />
-    <state x="596" y="268" key="git4idea.merge.GitPullDialog" timestamp="1598834650921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="596" y="268" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598834650921" />
-    <state x="642" y="85" key="refactoring.ChangeSignatureDialog" timestamp="1598672575554">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="642" y="85" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598672575554" />
-    <state x="532" y="231" width="840" height="1034" key="run.anything.popup" timestamp="1599452818550">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="532" y="231" width="840" height="1034" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599452818550" />
-    <state x="541" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1598601113722">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="541" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598601113722" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608696884172" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java</url>
+          <line>43</line>
+          <properties class="com.liyang.LiyangApplicationTests" method="contextLoads">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

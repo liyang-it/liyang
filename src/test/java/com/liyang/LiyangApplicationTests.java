@@ -9,6 +9,7 @@ import com.liyang.service.songService;
 import com.liyang.service.trackService;
 import com.liyang.task.TaskUpdateMusic;
 import com.liyang.tools.httpRequestTools;
+import com.liyang.tools.redisUtil;
 import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +17,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -32,10 +35,16 @@ public class LiyangApplicationTests {
   public trackService service3;
   @Autowired
   public songService service4;
+  @Autowired
+  public TaskUpdateMusic taskUpdateMusic;
 
+  @Resource
+  public redisUtil redisUtil;
   @Test
   public void contextLoads() {
-
+    System.out.println("测试redis开始");
+    System.out.println(redisUtil.get("fwCount"));
+    System.out.println("测试redis结束");
   }
 
 }

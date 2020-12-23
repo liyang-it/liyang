@@ -1,6 +1,7 @@
 package com.liyang.controller;
 
 import com.liyang.json.jsonResult;
+import com.liyang.tools.httpRequestTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -8,6 +9,9 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * 全局错误处理控制器
+ */
 @RestControllerAdvice
 @CrossOrigin
   public class exceptionController {
@@ -21,7 +25,8 @@ import javax.servlet.http.HttpServletRequest;
      */
     @ExceptionHandler(value = NoHandlerFoundException.class)
     public jsonResult exceptionError404(NoHandlerFoundException e, HttpServletRequest request){
-      String  msg = "失败！找不到相关接口[{"+request.getRequestURL()+"},{"+request.getRemoteAddr()+"}]";
+      String ip = httpRequestTools.getIpAddr(request);
+      String  msg = "失败！找不到相关接口[{"+request.getRequestURL()+"},{"+ip+"}]";
       log.error(msg);
       return jsonResult.resultError(msg);
     }
