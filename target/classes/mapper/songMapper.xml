@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liyang.mapper.songMapper">
+    <resultMap id="BaseResultMap" type="com.liyang.entity.song" >
+        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="alId" jdbcType="VARCHAR" property="alId" />
+        <result column="alName" jdbcType="VARCHAR" property="alName" />
+        <result column="alPic" jdbcType="VARCHAR" property="alPic" />
+        <result column="alPicUrl" jdbcType="VARCHAR" property="alPicUrl" />
+        <result column="arId" jdbcType="VARCHAR" property="arId" />
+        <result column="arName" jdbcType="VARCHAR" property="arName" />
+        <result column="mvId" jdbcType="VARCHAR" property="mvId" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="playListTimeid" jdbcType="VARCHAR" property="playListTimeid" />
+    </resultMap>
+    <resultMap id="musicResultMap" type="com.liyang.pojo.music">
+        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="alName" jdbcType="VARCHAR" property="alName" />
+        <result column="pic" jdbcType="VARCHAR" property="pic" />
+        <result column="artist" jdbcType="VARCHAR" property="artist" />
+        <result column="mvId" jdbcType="VARCHAR" property="mvId" />
+    </resultMap>
+    <select id="queryPlayListAll" resultMap="BaseResultMap" >
+        select * from song
+    </select>
+    <insert id="addSong" parameterType="com.liyang.entity.song" >
+        insert into song
+            (id,name,alId,alName,alPic,alPicUrl,arId,arName,mvId,url,playListTimeid)
+            values
+             (#{id}, #{name}, #{alId}, #{alName}, #{alPic}, #{alPicUrl}, #{arId}, #{arName}, #{mvId}, #{url}, #{playListTimeid})
+    </insert>
+
+    <select id="querySongsPageAll" resultMap="BaseResultMap" parameterType="com.liyang.entity.song">
+        select s1.* from track t1
+        right join
+        song s1 on t1.id = s1.id
+        where 1 = 1
+        <if test="id != null">
+        AND t1.gdid = #{id}
+        </if>
+        limit #{page},#{limit}
+    </select>
+    <select id="queryMusicAllByGdid" resultMap="musicResultMap" parameterType="com.liyang.entity.song">
+        SELECT
+        s1.id,
+        s1.name as 'title',
+        s1.alName,
+        s1.alPicUrl as 'pic',
+        s1.arName as 'artist',
+        s1.mvId
+        FROM
+        track t1
+        RIGHT JOIN song s1 ON t1.id = s1.id
+        WHERE
+        1 = 1
+        <if test="id != null">
+            AND t1.gdid = #{id}
+        </if>
+        limit #{page},#{limit}
+    </select>
+    <delete id="deleteSong" >
+        delete from song
+    </delete>
+</mapper>

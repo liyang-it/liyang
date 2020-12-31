@@ -8,5 +8,4 @@ import org.apache.ibatis.annotations.Param;
 public interface PlaylisttimeMapper {
   public int addPlayListTime(String s);
   int deletePlayListTime();
-
 }

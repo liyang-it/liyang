@@ -6,6 +6,9 @@ public class jsonResult<T> {
   private  T data;
 
   public jsonResult() {
+    this.code = 200;
+    this.msg = "操作成功";
+    this.data = null;
   }
 
   public jsonResult(T data) {
