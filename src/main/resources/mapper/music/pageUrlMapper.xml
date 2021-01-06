@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liyang.mapper.music.pageUrlMapper">
+    <resultMap id="BaseResultMap" type="com.liyang.entity.music.pageUrl" >
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="dict" jdbcType="VARCHAR" property="dict" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+    </resultMap>
+    <select id="queryPageUrl" resultType="java.lang.String" parameterType="java.lang.String">
+        SELECT url FROM music_page_url where dict = #{dict} and status = 1;
+    </select>
+    <select id="queryAll" resultMap="BaseResultMap">
+        SELECT * FROM music_page_url;
+    </select>
+    <update id="updatePageUrl" parameterType="com.liyang.entity.music.pageUrl">
+        update music_page_url
+        <set>
+            <if test="url != null || url != ''">
+                url = #{url},
+            </if>
+            <if test="status != null || status != ''">
+                status = #{status},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+</mapper>

@@ -29,15 +29,15 @@ public class liyangitController extends  baseController{
   @GetMapping("/incrAccessNumber.json")
   public resultData incrAccessNumber(HttpServletRequest request){
     // 一个ip地址一分钟内统计一次
-    String ip = httpRequestTools.getIpAddr(request);
-    StringBuilder sb = new StringBuilder("liyangit");
-    sb.append(ip);
-    sb.append("_IP");
-
-    if(!redisUtil.hasKey(sb.toString())){
+//    String ip = httpRequestTools.getIpAddr(request);
+//    StringBuilder sb = new StringBuilder("liyangit");
+//    sb.append(ip);
+//    sb.append("_IP");
       redisUtil.incr("liyangit:accessNumber",1);
-      redisUtil.set(sb.toString(),ip,30);
-    }
+//    if(!redisUtil.hasKey(sb.toString())){
+//      redisUtil.incr("liyangit:accessNumber",1);
+//      redisUtil.set(sb.toString(),ip,30);
+//    }
     return successResult(200,"操作成功",null);
   }
 }

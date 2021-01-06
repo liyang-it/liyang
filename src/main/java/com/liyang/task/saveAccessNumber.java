@@ -21,7 +21,7 @@ public class saveAccessNumber {
   public redisUtil redisUtil;
   @Autowired
   public systemAsNumberService systemAsNumberService;
-  @Scheduled(cron = "0 55 23 * * ? ")
+  @Scheduled(cron = "0 0 23 * * ? ")
   public void run(){
     String str = String.valueOf(redisUtil.get("liyangit:accessNumber"));
     Integer accessNumber = Integer.valueOf(str);
