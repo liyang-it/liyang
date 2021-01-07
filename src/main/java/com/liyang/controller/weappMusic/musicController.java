@@ -88,5 +88,39 @@ public class musicController {
     return  new jsonResult(result);
 
   }
+  // 一键开启 歌单界面
+  @GetMapping(value = "/enableGeDanPage.json")
+  public jsonResult enableGeDanPage(){
+    pageUrlService.updatePageUrl(new pageUrl(1,1));
+    pageUrlService.updatePageUrl(new pageUrl(2,0));
+    // 更新缓存
+    redisUtil.set("weapp:music:gedan_url",pageUrlService.queryPageUrl("gedan"));
+    return new jsonResult();
+  }
+  // 一键关闭歌单界面
+  @GetMapping(value = "/disableGeDanPage.json")
+  public jsonResult disableGeDanPage(){
+    pageUrlService.updatePageUrl(new pageUrl(1,0));
+    pageUrlService.updatePageUrl(new pageUrl(2,1));
+    redisUtil.set("weapp:music:gedan_url",pageUrlService.queryPageUrl("gedan"));
+    return new jsonResult();
+  }
 
+  // 一键开启 搜索界面
+  @GetMapping(value = "/enableSouSuoPage.json")
+  public jsonResult enableSouSuoPage(){
+    pageUrlService.updatePageUrl(new pageUrl(3,1));
+    pageUrlService.updatePageUrl(new pageUrl(4,0));
+    // 更新缓存
+    redisUtil.set("weapp:music:sousuo_url",pageUrlService.queryPageUrl("sousuo"));
+    return new jsonResult();
+  }
+  // 一键关闭搜索界面
+  @GetMapping(value = "/disableSouSuoPage.json")
+  public jsonResult disableSouSuoPage(){
+    pageUrlService.updatePageUrl(new pageUrl(3,0));
+    pageUrlService.updatePageUrl(new pageUrl(4,1));
+    redisUtil.set("weapp:music:sousuo_url",pageUrlService.queryPageUrl("sousuo"));
+    return new jsonResult();
+  }
 }

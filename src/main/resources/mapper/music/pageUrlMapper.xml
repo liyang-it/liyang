@@ -16,10 +16,10 @@
     <update id="updatePageUrl" parameterType="com.liyang.entity.music.pageUrl">
         update music_page_url
         <set>
-            <if test="url != null || url != ''">
+            <if test="url != null">
                 url = #{url},
             </if>
-            <if test="status != null || status != ''">
+            <if test="status != null">
                 status = #{status},
             </if>
         </set>

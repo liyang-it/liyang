@@ -6,10 +6,14 @@ public class pageUrl{
   @NotNull(message = "ID不能为空")
   private Integer id;
   private String dict;
-  @NotNull(message = "url不能为空")
   private String url;
   @NotNull(message = "status不能为空")
   private Integer status;
+
+  public pageUrl( Integer id, Integer status) {
+    this.id = id;
+    this.status = status;
+  }
 
   public pageUrl() {
   }
