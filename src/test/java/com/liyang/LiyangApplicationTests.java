@@ -3,10 +3,7 @@ package com.liyang;
 import com.alibaba.fastjson.JSON;
 import com.liyang.entity.Playlist;
 import com.liyang.entity.Track;
-import com.liyang.service.playListService;
-import com.liyang.service.playListTimeService;
-import com.liyang.service.songService;
-import com.liyang.service.trackService;
+import com.liyang.service.*;
 import com.liyang.task.TaskUpdateMusic;
 import com.liyang.tools.httpRequestTools;
 import com.liyang.tools.redisUtil;
@@ -37,14 +34,16 @@ public class LiyangApplicationTests {
   public songService service4;
   @Autowired
   public TaskUpdateMusic taskUpdateMusic;
-
   @Resource
   public redisUtil redisUtil;
+  @Autowired
+  public com.liyang.service.systemAsNumberService systemAsNumberService;
   @Test
   public void contextLoads() {
-    System.out.println("测试redis开始");
-    System.out.println(redisUtil.get("fwCount"));
-    System.out.println("测试redis结束");
+    String str = String.valueOf(redisUtil.get("liyangit:accessNumber"));
+    Integer accessNumber = Integer.valueOf(str);
+    System.out.println(accessNumber);
+    systemAsNumberService.updateAccessNumber(accessNumber);
   }
 
 }
