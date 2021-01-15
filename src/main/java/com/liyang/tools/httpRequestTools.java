@@ -37,6 +37,8 @@ public class httpRequestTools {
       bufferedReader.close();
       inputStreamReader.close();
       inputStream.close();
+
+
       //System.out.println("请求返回值：" + sb.toString());
     } catch (MalformedURLException e) {
       log.error("创建URL对象失败！原因 [{}],URL: [{}]",e.getMessage(),toUrl);

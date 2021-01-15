@@ -1,10 +1,14 @@
 package com.liyang.controller;
 
+import com.liyang.entity.music.rmpl;
+import com.liyang.json.jsonResult;
 import com.liyang.result.resultData;
+import com.liyang.service.music.rmplService;
 import com.liyang.tools.httpRequestTools;
 import com.liyang.tools.redisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +23,8 @@ public class liyangitController extends  baseController{
   private Logger log = LoggerFactory.getLogger(liyangitController.class);
   @Resource
   private redisUtil redisUtil;
+  @Autowired
+  private rmplService rmplService;
   // 得到访问人数
   @GetMapping("/getAccessNumber.json")
   public resultData getAccessNumber(){
@@ -39,5 +45,10 @@ public class liyangitController extends  baseController{
 //      redisUtil.set(sb.toString(),ip,30);
 //    }
     return successResult(200,"操作成功",null);
+  }
+
+  @GetMapping("/getHotComments.json")
+  public jsonResult getHotComments(){
+    return new jsonResult(rmplService.selectRandRmpl());
   }
 }
