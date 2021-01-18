@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liyang.mapper.PlaylistMapper">
+    <resultMap id="BaseResultMap" type="com.liyang.entity.Playlist" >
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="picurl" jdbcType="VARCHAR" property="picurl" />
+        <result column="playcount" jdbcType="INTEGER" property="playcount" />
+        <result column="trackcount" jdbcType="INTEGER" property="trackcount" />
+        <result column="tracknumberupdatetime" jdbcType="VARCHAR" property="tracknumberupdatetime" />
+        <result column="type" jdbcType="INTEGER" property="type" />
+        <result column="alg" jdbcType="VARCHAR" property="alg" />
+        <result column="candislike" jdbcType="INTEGER" property="candislike" />
+        <result column="copywriter" jdbcType="VARCHAR" property="copywriter" />
+        <result column="highquality" jdbcType="INTEGER" property="highquality" />
+        <result column="playlisttimeid" jdbcType="VARCHAR" property="playlisttimeid" />
+    </resultMap>
+    <select id="queryPlayListAll" resultMap="BaseResultMap" >
+        select * from playList
+    </select>
+    <insert id="addPlayList" parameterType="com.liyang.entity.Playlist" >
+        insert into playList
+            (id,name,picUrl,playCount,trackCount,trackNumberUpdateTime,type,alg,canDislike,copywriter,highQuality,playListTimeId)
+            values
+             (#{id}, #{name}, #{picurl}, #{playcount}, #{trackcount}, #{tracknumberupdatetime}, #{type}, #{alg}, #{candislike}, #{copywriter}, #{highquality}, #{playlisttimeid})
+    </insert>
+
+    <select id="queryPlayListPageAll" resultMap="BaseResultMap" parameterType="com.liyang.entity.Playlist">
+        SELECT p2.* FROM playListTime p1
+        right join
+        playList p2
+        on p1.id = p2.playListTimeId
+        where 1 = 1
+        -- AND p1.playListCreateDate = adddate(current_date(),interval -1 day)
+         limit #{page},#{limit}
+    </select>
+    <delete id="deletePlayList">
+        delete from playList
+    </delete>
+
+</mapper>
