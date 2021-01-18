@@ -21,7 +21,7 @@ public class videoController {
   public jsonResult disableShow(){
     return new jsonResult(videoShowService.disableShow());
   }
-
+  // asdasd
   @GetMapping(value = "/enableShow.json")
   public jsonResult enableShow(){
     return new jsonResult(videoShowService.enableShow());

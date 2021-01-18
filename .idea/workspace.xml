@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="" />
+    <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -320,7 +322,7 @@
       <workItem from="1609906157502" duration="9501000" />
       <workItem from="1609989933397" duration="765000" />
       <workItem from="1610673780829" duration="11352000" />
-      <workItem from="1610953531384" duration="1377000" />
+      <workItem from="1610953531384" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="第一次">
       <created>1598691264833</created>
@@ -448,11 +450,54 @@
       <option name="project" value="LOCAL" />
       <updated>1610954747063</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="加入 微信小程序视频，音乐隐藏显示控制">
+      <created>1610955109799</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610955109799</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次" />
@@ -470,7 +515,8 @@
     <MESSAGE value="加入柠檬酸音乐小程序 歌单界面，搜索界面的开关接口" />
     <MESSAGE value="新增网易云歌曲热门随机评论" />
     <MESSAGE value="加入 微信小程序视频隐藏显示控制" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入 微信小程序视频隐藏显示控制" />
+    <MESSAGE value="加入 微信小程序视频，音乐隐藏显示控制" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入 微信小程序视频，音乐隐藏显示控制" />
   </component>
   <component name="WindowStateProjectService">
     <state x="580" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609388603365">
@@ -489,10 +535,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605839219812" />
-    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1610954963754">
+    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1610955289972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1610954963754" />
+    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1610955289972" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610955070876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -533,10 +579,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1868" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1610954756972">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1610955117520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610954756972" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610955117520" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1610681328980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
