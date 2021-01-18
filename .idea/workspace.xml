@@ -322,7 +322,7 @@
       <workItem from="1609906157502" duration="9501000" />
       <workItem from="1609989933397" duration="765000" />
       <workItem from="1610673780829" duration="11352000" />
-      <workItem from="1610953531384" duration="1698000" />
+      <workItem from="1610953531384" duration="2341000" />
     </task>
     <task id="LOCAL-00001" summary="第一次">
       <created>1598691264833</created>
@@ -457,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610955109799</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="加入 微信小程序视频，音乐隐藏显示控制">
+      <created>1610955308372</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610955308372</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,22 +554,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607301055157" />
-    <state width="934" height="334" key="GridCell.Tab.0.bottom" timestamp="1610955030119">
+    <state width="1868" height="334" key="GridCell.Tab.0.bottom" timestamp="1610955913236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610955030119" />
-    <state width="934" height="334" key="GridCell.Tab.0.center" timestamp="1610955030119">
+    <state width="1868" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610955913236" />
+    <state width="1868" height="334" key="GridCell.Tab.0.center" timestamp="1610955913235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610955030119" />
-    <state width="934" height="334" key="GridCell.Tab.0.left" timestamp="1610955030119">
+    <state width="1868" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610955913235" />
+    <state width="1868" height="334" key="GridCell.Tab.0.left" timestamp="1610955913235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610955030119" />
-    <state width="934" height="334" key="GridCell.Tab.0.right" timestamp="1610955030119">
+    <state width="1868" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610955913235" />
+    <state width="1868" height="334" key="GridCell.Tab.0.right" timestamp="1610955913236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610955030119" />
+    <state width="1868" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610955913236" />
     <state width="1868" height="334" key="GridCell.Tab.1.bottom" timestamp="1610954695468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -579,10 +586,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1868" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1610955117520">
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1610955312689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610955117520" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610955312689" />
+    <state x="596" y="268" key="git4idea.merge.GitPullDialog" timestamp="1610955478683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="596" y="268" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610955478683" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1610681328980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
