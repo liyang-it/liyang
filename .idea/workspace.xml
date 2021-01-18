@@ -7,14 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/entity/music/rmpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/music/rmplMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/music/rmplService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/music/rmplMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/webappVideo/videoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/entity/video/videoShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/mapper/video/videoShowMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/video/impl/videoShowServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/service/video/videoShowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/video/videoShowMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/controller/liyangitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/liyangitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/tools/httpRequestTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/tools/httpRequestTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,9 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1gZeQGtfz4xhxkRmpVeWggVaBDE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -87,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/music" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/video" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -100,12 +102,15 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\李杨\liyang\src\main\resources\mapper" />
-      <recent name="F:\李杨\liyang\src\main\resources\generator" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.liyang" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\李杨\liyang\src\main\resources\mapper\video" />
+      <recent name="F:\李杨\liyang\src\main\resources\mapper\music" />
+      <recent name="F:\李杨\liyang\src\main\resources\mapper" />
+      <recent name="F:\李杨\liyang\src\main\resources" />
+      <recent name="F:\李杨\liyang\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.liyang.service.music.impl" />
@@ -114,12 +119,9 @@
       <recent name="com.liyang.service.impl" />
       <recent name="com.liyang.service" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\李杨\liyang\src\main\resources\mapper\music" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\李杨\liyang\src\main\resources\mapper" />
-      <recent name="F:\李杨\liyang\src\main\resources" />
-      <recent name="F:\李杨\liyang\src\main\resources\static" />
-      <recent name="F:\李杨\liyang\src\main\resources\static\element\fonts" />
+      <recent name="F:\李杨\liyang\src\main\resources\generator" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.LiyangApplication">
@@ -326,7 +328,8 @@
       <workItem from="1609743471575" duration="586000" />
       <workItem from="1609906157502" duration="9501000" />
       <workItem from="1609989933397" duration="765000" />
-      <workItem from="1610673780829" duration="10330000" />
+      <workItem from="1610673780829" duration="11352000" />
+      <workItem from="1610953531384" duration="1026000" />
     </task>
     <task id="LOCAL-00001" summary="第一次">
       <created>1598691264833</created>
@@ -440,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609990049903</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="新增网易云歌曲热门随机评论">
+      <created>1610693206040</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610693206093</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,17 +470,18 @@
     <MESSAGE value="加入微信小程序的控制器" />
     <MESSAGE value="加入微信小程序具体页面Url控制器,去除网站访问量统计 30秒统计一次的逻辑" />
     <MESSAGE value="加入柠檬酸音乐小程序 歌单界面，搜索界面的开关接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入柠檬酸音乐小程序 歌单界面，搜索界面的开关接口" />
+    <MESSAGE value="新增网易云歌曲热门随机评论" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增网易云歌曲热门随机评论" />
   </component>
   <component name="WindowStateProjectService">
     <state x="580" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609388603365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="580" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1609388603365" />
-    <state x="721" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1610692482636">
+    <state x="721" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1610953933830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="150" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610692482636" />
+    <state x="721" y="150" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610953933830" />
     <state x="629" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610679362671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -479,50 +490,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605839219812" />
-    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1610693163990">
+    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1610954735768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1610693163990" />
+    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1610954735768" />
     <state x="690" y="219" key="FileChooserDialogImpl" timestamp="1607301055157">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607301055157" />
-    <state width="1868" height="400" key="GridCell.Tab.0.bottom" timestamp="1610692936263">
+    <state width="1868" height="334" key="GridCell.Tab.0.bottom" timestamp="1610954695468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610692936263" />
-    <state width="1868" height="400" key="GridCell.Tab.0.center" timestamp="1610692936263">
+    <state width="1868" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
+    <state width="1868" height="334" key="GridCell.Tab.0.center" timestamp="1610954695467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610692936263" />
-    <state width="1868" height="400" key="GridCell.Tab.0.left" timestamp="1610692936262">
+    <state width="1868" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695467" />
+    <state width="1868" height="334" key="GridCell.Tab.0.left" timestamp="1610954695467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610692936262" />
-    <state width="1868" height="400" key="GridCell.Tab.0.right" timestamp="1610692936263">
+    <state width="1868" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695467" />
+    <state width="1868" height="334" key="GridCell.Tab.0.right" timestamp="1610954695468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610692936263" />
-    <state width="1868" height="400" key="GridCell.Tab.1.bottom" timestamp="1610692776089">
+    <state width="1868" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
+    <state width="1868" height="334" key="GridCell.Tab.1.bottom" timestamp="1610954695468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610692776089" />
-    <state width="1868" height="400" key="GridCell.Tab.1.center" timestamp="1610692776089">
+    <state width="1868" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
+    <state width="1868" height="334" key="GridCell.Tab.1.center" timestamp="1610954695468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610692776089" />
-    <state width="1868" height="400" key="GridCell.Tab.1.left" timestamp="1610692776089">
+    <state width="1868" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
+    <state width="1868" height="334" key="GridCell.Tab.1.left" timestamp="1610954695468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610692776089" />
-    <state width="1868" height="400" key="GridCell.Tab.1.right" timestamp="1610692776089">
+    <state width="1868" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
+    <state width="1868" height="334" key="GridCell.Tab.1.right" timestamp="1610954695468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="400" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610692776089" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1609990055631">
+    <state width="1868" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610954695468" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1610693216192">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609990055631" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610693216192" />
     <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1610681328980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

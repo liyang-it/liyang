@@ -31,7 +31,7 @@ spring:
         min-idle: 0
 mybatis:
     # 映射mapper .xml文件位置
-  mapper-locations: classpath:mapper/*Mapper.xml,classpath:mapper/music/*Mapper.xml
+  mapper-locations: classpath:mapper/*Mapper.xml,classpath:mapper/music/*Mapper.xml,classpath:mapper/video/*Mapper.xml
     #实体类映射位置
   type-aliases-package: com.liyang.entity
     # spring boot集成mybatis的方式打印sql
