@@ -13,7 +13,7 @@
         <result column="lang" jdbcType="VARCHAR" property="lang" />
         <result column="year" jdbcType="VARCHAR" property="year" />
         <result column="content" jdbcType="VARCHAR" property="content" />
-        <result column="url" jdbcType="VARCHAR" property="playUrl" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
     </resultMap>
     <select id="queryVideoByNameAndPage" resultMap="BaseResultMap">
         call maccms.query_vod_list(#{name}, #{page}, #{limit});

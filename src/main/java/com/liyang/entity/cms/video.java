@@ -12,7 +12,7 @@ public class video {
   private String lang;
   private String year;
   private String content;
-  private String playUrl;
+  private String url;
 
   public String getName() {
     return name;
@@ -94,15 +94,15 @@ public class video {
     this.content = content;
   }
 
-  public String getPlayUrl() {
-    return playUrl;
+  public String getUrl() {
+    return url;
   }
 
-  public void setPlayUrl(String playUrl) {
-    this.playUrl = playUrl;
+  public void setUrl(String url) {
+    this.url = url;
   }
 
-  public video(Integer id, String name, String sub, String type, String pic, String actor, String remarks, String area, String lang, String year, String content, String playUrl) {
+  public video(Integer id, String name, String sub, String type, String pic, String actor, String remarks, String area, String lang, String year, String content, String url) {
     this.id = id;
     this.name = name;
     this.sub = sub;
@@ -114,7 +114,7 @@ public class video {
     this.lang = lang;
     this.year = year;
     this.content = content;
-    this.playUrl = playUrl;
+    this.url = url;
   }
 
   public Integer getId() {
