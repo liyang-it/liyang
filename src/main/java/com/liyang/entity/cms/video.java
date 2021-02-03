@@ -1,6 +1,7 @@
 package com.liyang.entity.cms;
 
 public class video {
+  private Integer id;
   private String name;
   private String sub;
   private String type;
@@ -101,7 +102,8 @@ public class video {
     this.playUrl = playUrl;
   }
 
-  public video(String name, String sub, String type, String pic, String actor, String remarks, String area, String lang, String year, String content, String playUrl) {
+  public video(Integer id, String name, String sub, String type, String pic, String actor, String remarks, String area, String lang, String year, String content, String playUrl) {
+    this.id = id;
     this.name = name;
     this.sub = sub;
     this.type = type;
@@ -113,6 +115,14 @@ public class video {
     this.year = year;
     this.content = content;
     this.playUrl = playUrl;
+  }
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
   }
 
   public video() {

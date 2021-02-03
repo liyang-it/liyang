@@ -19,4 +19,9 @@ public class videoServiceImpl implements videoService {
   public List<video> queryVideoByNameAndPage(String name, int page, int limit) {
     return videoMapper.queryVideoByNameAndPage(name,page,limit);
   }
+
+  @Override
+  public video queryVideoById(Integer id) {
+    return videoMapper.queryVideoById(id);
+  }
 }
