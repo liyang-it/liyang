@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: 664243
-    url: jdbc:mysql://47.99.165.122:3306/liyang?useUnicode=true&characterEncoding=utf-8&useSSL=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=CTT
+    url: jdbc:mysql://127.0.0.1:3306/liyang?useUnicode=true&characterEncoding=utf-8&useSSL=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=CTT
     driver-class-name: com.mysql.jdbc.Driver
   ##配置项目访问名
   mvc:
@@ -13,11 +13,11 @@ spring:
     # Redis数据库索引（默认为0）
     database: 0
     # Redis服务器地址
-    host: 47.99.165.122
+    host: 127.0.0.1
     # Redis端口号
     port: 6379
     # Redis 密码
-    password:
+    password: LiYang15117723173
     # 连接池
     lettuce:
       pool:
