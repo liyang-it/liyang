@@ -8,9 +8,7 @@ import com.liyang.tools.redisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
@@ -26,19 +24,28 @@ public class musicController {
   @GetMapping(value = "/getIsToGd.json")
   public jsonResult getIsToGd(HttpServletResponse response){
     Integer result = 0;
-    if(redisUtil.hasKey("weapp:music:istogd")){
-      result = (Integer)redisUtil.get("weapp:music:istogd");
-    }else{
+    try {
+      if(redisUtil.hasKey("weapp:music:istogd")){
+        result = (Integer)redisUtil.get("weapp:music:istogd");
+      }else{
+        result = controlService.queryIsToGd();
+        redisUtil.set("weapp:music:istogd",result);
+      }
+    }catch(Exception e){
+      // 如果redis 有问题查询数据库
       result = controlService.queryIsToGd();
-      redisUtil.set("weapp:music:istogd",result);
     }
+
     return new jsonResult(result);
   }
   // 设置是否跳转具体歌单
   @GetMapping(value = "/setIsToGd.json/{param}")
   public jsonResult setIsToGd(@PathVariable Integer param){
      int result = controlService.setIsToGd(param);
-     redisUtil.set("weapp:music:istogd",param);
+     try {
+       redisUtil.set("weapp:music:istogd",param);
+     }catch(Exception e){ }
+
     return new jsonResult();
   }
   /**
@@ -48,12 +55,17 @@ public class musicController {
   public jsonResult getGeDanUrl(){
     String key = "weapp:music:gedan_url";
     String url = null;
-    if(redisUtil.hasKey(key)){
-      url = redisUtil.get(key).toString();
-    }else{
+    try {
+      if(redisUtil.hasKey(key)){
+        url = redisUtil.get(key).toString();
+      }else{
+        url = pageUrlService.queryPageUrl("gedan");
+        redisUtil.set(key,url);
+      }
+    }catch(Exception e){
       url = pageUrlService.queryPageUrl("gedan");
-      redisUtil.set(key,url);
     }
+
     return new jsonResult(url);
   }
 
@@ -64,11 +76,16 @@ public class musicController {
   public jsonResult getSouSuoUrl(){
     String key = "weapp:music:sousuo_url";
     String url = null;
-    if(redisUtil.hasKey(key)){
-      url = redisUtil.get(key).toString();
-    }else{
+
+    try {
+      if(redisUtil.hasKey(key)){
+        url = redisUtil.get(key).toString();
+      }else{
+        url = pageUrlService.queryPageUrl("sousuo");
+        redisUtil.set(key,url);
+      }
+    }catch(Exception e){
       url = pageUrlService.queryPageUrl("sousuo");
-      redisUtil.set(key,url);
     }
     return new jsonResult(url);
   }
@@ -94,7 +111,10 @@ public class musicController {
     pageUrlService.updatePageUrl(new pageUrl(1,1));
     pageUrlService.updatePageUrl(new pageUrl(2,0));
     // 更新缓存
-    redisUtil.set("weapp:music:gedan_url",pageUrlService.queryPageUrl("gedan"));
+    try {
+      redisUtil.set("weapp:music:gedan_url",pageUrlService.queryPageUrl("gedan"));
+    }catch (Exception e){}
+
     return new jsonResult();
   }
   // 一键关闭歌单界面
@@ -102,7 +122,10 @@ public class musicController {
   public jsonResult disableGeDanPage(){
     pageUrlService.updatePageUrl(new pageUrl(1,0));
     pageUrlService.updatePageUrl(new pageUrl(2,1));
-    redisUtil.set("weapp:music:gedan_url",pageUrlService.queryPageUrl("gedan"));
+    try {
+      redisUtil.set("weapp:music:gedan_url",pageUrlService.queryPageUrl("gedan"));
+    }catch (Exception e){}
+
     return new jsonResult();
   }
 
@@ -112,7 +135,10 @@ public class musicController {
     pageUrlService.updatePageUrl(new pageUrl(3,1));
     pageUrlService.updatePageUrl(new pageUrl(4,0));
     // 更新缓存
-    redisUtil.set("weapp:music:sousuo_url",pageUrlService.queryPageUrl("sousuo"));
+    try {
+      redisUtil.set("weapp:music:sousuo_url",pageUrlService.queryPageUrl("sousuo"));
+    }catch (Exception e){}
+
     return new jsonResult();
   }
   // 一键关闭搜索界面
@@ -120,7 +146,9 @@ public class musicController {
   public jsonResult disableSouSuoPage(){
     pageUrlService.updatePageUrl(new pageUrl(3,0));
     pageUrlService.updatePageUrl(new pageUrl(4,1));
-    redisUtil.set("weapp:music:sousuo_url",pageUrlService.queryPageUrl("sousuo"));
+    try {
+      redisUtil.set("weapp:music:sousuo_url",pageUrlService.queryPageUrl("sousuo"));
+    }catch (Exception e){}
     return new jsonResult();
   }
 }
