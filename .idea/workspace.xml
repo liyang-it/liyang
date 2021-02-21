@@ -6,11 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment="">
+    <list default="true" id="142350f6-f73d-4e3a-a74b-a7d19fd2ef34" name="Default Changelist" comment=" ...1】、">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/fileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/liyang/tools/saveUrlFIle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/entity/cms/video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/entity/cms/video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/cms/videoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/cms/videoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/controller/webappVideo/videoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/controller/webappVideo/videoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/task/TaskUpdateMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/task/TaskUpdateMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/liyang/task/saveAccessNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/liyang/task/saveAccessNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/cms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -173,6 +176,22 @@
       <option name="PACKAGE_NAME" value="com.liyang" />
       <option name="MAIN_CLASS_NAME" value="com.liyang.LiyangApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LiyangApplicationTests.ss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="liyang" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liyang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.liyang" />
+      <option name="MAIN_CLASS_NAME" value="com.liyang.LiyangApplicationTests" />
+      <option name="METHOD_NAME" value="ss" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -269,9 +288,11 @@
       <item itemvalue="JUnit.LiyangApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.LiyangApplication" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.8" />
+      <item itemvalue="JUnit.LiyangApplicationTests.ss" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LiyangApplicationTests.ss" />
         <item itemvalue="JUnit.LiyangApplicationTests.contextLoads" />
         <item itemvalue="Application.TaskUpdateMusic" />
         <item itemvalue="Application.dateTimeTool" />
@@ -328,7 +349,9 @@
       <workItem from="1610953531384" duration="2341000" />
       <workItem from="1611814477635" duration="720000" />
       <workItem from="1612236295482" duration="2835000" />
-      <workItem from="1612315212920" duration="2268000" />
+      <workItem from="1612315212920" duration="7730000" />
+      <workItem from="1612508278258" duration="43000" />
+      <workItem from="1613892883161" duration="5269000" />
     </task>
     <task id="LOCAL-00001" summary="第一次">
       <created>1598691264833</created>
@@ -491,7 +514,56 @@
       <option name="project" value="LOCAL" />
       <updated>1612316580284</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="影视接口优化">
+      <created>1612325252886</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1612325252886</updated>
+    </task>
+    <task id="LOCAL-00025" summary="影视接口优化">
+      <created>1612400336212</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612400336212</updated>
+    </task>
+    <task id="LOCAL-00026" summary=" ...">
+      <created>1612430601947</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612430601947</updated>
+    </task>
+    <task id="LOCAL-00027" summary=" ...">
+      <created>1612490673634</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612490673634</updated>
+    </task>
+    <task id="LOCAL-00028" summary=" ...">
+      <created>1612490724670</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612490724670</updated>
+    </task>
+    <task id="LOCAL-00029" summary=" ...">
+      <created>1612491479230</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612491479230</updated>
+    </task>
+    <task id="LOCAL-00030" summary=" ...1】、">
+      <created>1612491626087</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612491626087</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +625,10 @@
     <MESSAGE value="影视数据具体类" />
     <MESSAGE value="加入影视接口" />
     <MESSAGE value="更改影视接口名称，更改为详细和列表查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="更改影视接口名称，更改为详细和列表查询" />
+    <MESSAGE value="影视接口优化" />
+    <MESSAGE value=" ..." />
+    <MESSAGE value=" ...1】、" />
+    <option name="LAST_COMMIT_MESSAGE" value=" ...1】、" />
   </component>
   <component name="WindowStateProjectService">
     <state x="580" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609388603365">
@@ -576,54 +651,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="210" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605839219812" />
-    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1612325240171">
+    <state x="443" y="50" key="CommitChangelistDialog2" timestamp="1613899602493">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1612325240171" />
+    <state x="443" y="50" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1613899602493" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610955070876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610955070876" />
-    <state x="690" y="219" key="FileChooserDialogImpl" timestamp="1607301055157">
+    <state x="690" y="219" key="FileChooserDialogImpl" timestamp="1612508320991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607301055157" />
-    <state width="1868" height="219" key="GridCell.Tab.0.bottom" timestamp="1612325215199">
+    <state x="690" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612508320991" />
+    <state width="1868" height="256" key="GridCell.Tab.0.bottom" timestamp="1613899546993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612325215199" />
-    <state width="1868" height="219" key="GridCell.Tab.0.center" timestamp="1612325215198">
+    <state width="1868" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613899546993" />
+    <state width="1868" height="256" key="GridCell.Tab.0.center" timestamp="1613899546992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612325215198" />
-    <state width="1868" height="219" key="GridCell.Tab.0.left" timestamp="1612325215198">
+    <state width="1868" height="256" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613899546992" />
+    <state width="1868" height="256" key="GridCell.Tab.0.left" timestamp="1613899546992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612325215198" />
-    <state width="1868" height="219" key="GridCell.Tab.0.right" timestamp="1612325215199">
+    <state width="1868" height="256" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613899546992" />
+    <state width="1868" height="256" key="GridCell.Tab.0.right" timestamp="1613899546993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612325215199" />
-    <state width="1868" height="219" key="GridCell.Tab.1.bottom" timestamp="1612325083491">
+    <state width="1868" height="256" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613899546993" />
+    <state width="1868" height="256" key="GridCell.Tab.1.bottom" timestamp="1613898590340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1612325083491" />
-    <state width="1868" height="219" key="GridCell.Tab.1.center" timestamp="1612325083491">
+    <state width="1868" height="256" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1613898590340" />
+    <state width="1868" height="256" key="GridCell.Tab.1.center" timestamp="1613898590340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1612325083491" />
-    <state width="1868" height="219" key="GridCell.Tab.1.left" timestamp="1612325083491">
+    <state width="1868" height="256" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1613898590340" />
+    <state width="1868" height="256" key="GridCell.Tab.1.left" timestamp="1613898590340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1612325083491" />
-    <state width="1868" height="219" key="GridCell.Tab.1.right" timestamp="1612325083491">
+    <state width="1868" height="256" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1613898590340" />
+    <state width="1868" height="256" key="GridCell.Tab.1.right" timestamp="1613898590340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1868" height="219" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1612325083491" />
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1612316583837">
+    <state width="1868" height="256" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1613898590340" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2" timestamp="1612491628628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1612316583837" />
+    <state x="452" y="189" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1612491628628" />
     <state x="512" y="45" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612257796431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -642,7 +717,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/liyang/LiyangApplicationTests.java</url>
-          <line>51</line>
+          <line>67</line>
           <properties class="com.liyang.LiyangApplicationTests" method="contextLoads">
             <option name="EMULATED" value="true" />
           </properties>

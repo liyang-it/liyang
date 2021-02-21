@@ -10,6 +10,7 @@ import com.liyang.service.songService;
 import com.liyang.service.trackService;
 import com.liyang.tools.dateTimeTool;
 import com.liyang.tools.httpRequestTools;
+import com.liyang.tools.saveUrlFIle;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -51,6 +53,16 @@ public class TaskUpdateMusic {
    */
   @Scheduled(cron = "0 0 5 * * ? ")
   public void delPlayList1(){
+    // 删除临时视频文件
+    String path = saveUrlFIle.path;
+    File file = new File(path);
+    if(file.exists()){
+      File[] files = file.listFiles();
+      for (File f:files) {
+        f.delete();
+      }
+    }
+    // 音乐任务
     this.runDelMusic();
     this.runAddMusic();
   }

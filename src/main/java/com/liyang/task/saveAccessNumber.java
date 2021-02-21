@@ -17,14 +17,14 @@ import javax.annotation.Resource;
 @EnableScheduling
 @Configuration
 public class saveAccessNumber {
-  @Resource
-  public redisUtil redisUtil;
-  @Autowired
-  public systemAsNumberService systemAsNumberService;
-  @Scheduled(cron = "0 0 23 * * ? ")
-  public void run(){
-    String str = String.valueOf(redisUtil.get("liyangit:accessNumber"));
-    Integer accessNumber = Integer.valueOf(str);
-    systemAsNumberService.updateAccessNumber(accessNumber);
-  }
+//  @Resource
+//  public redisUtil redisUtil;
+//  @Autowired
+//  public systemAsNumberService systemAsNumberService;
+//  @Scheduled(cron = "0 0 23 * * ? ")
+//  public void run(){
+//    String str = String.valueOf(redisUtil.get("liyangit:accessNumber"));
+//    Integer accessNumber = Integer.valueOf(str);
+//    systemAsNumberService.updateAccessNumber(accessNumber);
+//  }
 }
